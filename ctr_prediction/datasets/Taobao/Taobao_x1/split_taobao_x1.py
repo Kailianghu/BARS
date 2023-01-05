@@ -34,6 +34,7 @@ train_df = df[df['time_stamp'] < '2017-05-13']
 test_df = df[df['time_stamp'] >= '2017-05-13']
 
 # Generate click and no_click sequence
+# 原始代码创建的click_history 的数据来自于raw_sample数据集，也就是训练数据集包含的几天数据的行为。包含用户行为数据的特征在behavior_log数据集中。
 click_sequence_queue = defaultdict(list)
 click_time = ""
 click_history_col = []
